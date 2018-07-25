@@ -1,68 +1,54 @@
 <template>
     <div class="index">
+<div v-drag-and-drop:options="store.index.options">
+  <ul>
+    <li v-for="item in imageArr" :key="item">
+      <img :src="item" >
+    </li>
+    
+  </ul>
  
-          <el-carousel :interval="4000" type="card" >
-    <el-carousel-item v-for="item in 6" :key="item">
-      <h3>{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
-<div v-drag-and-drop:options="options">
-  <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-  </ul>
-  <ul>
-      <li>Item 4</li>
-      <li>Item 5</li>
-      <li>Item 6</li>
-  </ul>
-</div>
+    </div>
+    <el-pagination  background  layout="prev, pager, next"  :total="30" @next-click="checkPage" @prev-click="checkPage" @current-change="checkPage"></el-pagination>
     </div>
 </template>
 <script>
 export default {
   data() {
     return {
-     options: {
-  dropzoneSelector: 'ul',
-  draggableSelector: 'li',
-  excludeOlderBrowsers: true,
-  multipleDropzonesItemsDraggingEnabled: true,
-  showDropzoneAreas: true,
-  onDrop: function(event) {},
-  onDragstart: function(event) {},
-  onDragend: function(event) {}
-}
-    };
+      imageArr:[]
+    }
   },
 
   created() {
-    console.log(this.$route.params.name);
+    this.imageArr=this.store.index.imageUrl.slice(0,10)
+    console.log(this.store);
   },
   methods: {
-    name() {}
+    /**
+     * 点击分页条上下一页
+     * @newpage  当前页
+     */
+    checkPage(newpage) {
+      this.imageArr=this.store.index.imageUrl.slice((newpage-1)*10,10*newpage)
+    },
+    
   }
 };
 </script>
-<style>
-.item {
-  height: 20px;
-  margin: 10px;
-  background-color: #0ff;
-}
-.el-carousel__item h3 {
-  color: #475669;
-  font-size: 14px;
-  opacity: 0.75;
-  margin: 0;
-}
-
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
+<style scoped lang="less">
+.index {
+  
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      justify-content:space-around;
+      margin:10px;
+      img{
+        border-radius: 30%;
+      }
+    }
+  }
 }
 </style>
