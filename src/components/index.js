@@ -1,8 +1,10 @@
 import bgFilter from "./bgFilter"
 import pagination from "./pagination"
+import qrCode from "./qrCode.vue"
 const components = [
   bgFilter,
-  pagination
+  pagination,
+  qrCode
 ]
 
 const install = (Vue) => {

@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-      <bgFilter/>
+      <!-- <bgFilter/> -->
 <div v-drag-and-drop:options="store.index.options" class="drage">
     <h2>我的项目</h2>
   <ul>
@@ -45,7 +45,8 @@ export default {
      * @url  跳转的链接
      */
     routerGo(item){
-     this.$router.push({name:item.router,path:item.gitpath})
+      console.log(item.router)
+     this.$router.push({name:item.router,params:{gitpath:item.gitpath}})
     }
   }
 };
@@ -53,12 +54,13 @@ export default {
 <style scoped lang="less">
 .index {
   color: aliceblue;
+  background-color: rgb(74, 75, 70);
+  height:100%;
   .drage {
     position:absolute;
-    top:5%;
-    left: 10%;
-    width:80%;
-    height:60%;
+    top:0;
+    left: 0;
+    margin:30px;
     z-index: 2;
     h2{
       margin: 20px;
