@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-      <!-- <bgFilter/> -->
+      <bgFilter/>
 <div v-drag-and-drop:options="store.index.options" class="drage">
     <h2>我的项目</h2>
   <ul>
