@@ -5,7 +5,7 @@
     <h2>我的项目</h2>
   <ul>
     <!-- 每个版块里有图片和跳转的路径 -->
-    <li v-for="item in imageArr" :key="item" @click="routerGo(item)">
+    <li v-for="(item,index) in imageArr" :key="index" @click="routerGo(item)">
       <img :src="item.url" >
         <h4>{{item.name}}</h4>
     </li>
