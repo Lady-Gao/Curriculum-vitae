@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="bg"/>
+        
     </div>
 </template>
 
@@ -24,5 +25,6 @@
     -moz-filter: blur(5px);
     -ms-filter: blur(5px);
     filter: blur(5px);
+    z-index: 0;
   }
 </style>

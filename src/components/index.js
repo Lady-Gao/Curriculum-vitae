@@ -1,6 +1,8 @@
 import bgFilter from "./bgFilter"
+import pagination from "./pagination"
 const components = [
-  bgFilter
+  bgFilter,
+  pagination
 ]
 
 const install = (Vue) => {
