@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-      <!-- <bgFilter/> -->
+      <bgFilter/>
 <div v-drag-and-drop:options="store.index.options" class="drage">
     <h2>我的项目</h2>
   <ul>
@@ -46,15 +46,16 @@ export default {
      */
     routerGo(item){
       console.log(item.router)
-     this.$router.push({name:item.router,params:{gitpath:item.gitpath}})
+     this.$router.push({name:item.router,params:item})
     }
   }
 };
 </script>
 <style scoped lang="less">
 .index {
+  box-sizing: border-box;
   color: aliceblue;
-  background-color: rgb(74, 75, 70);
+  // background-color: rgb(74, 75, 70);
   height:100%;
   .drage {
     position:absolute;

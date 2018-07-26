@@ -8,7 +8,7 @@ import ElementUI from 'element-ui';
 import * as store from './utils';
 import components from "./components";
 import VueDraggable from 'vue-draggable'
-
+import directive from "./directives"
 
 
 Vue.config.productionTip = false
@@ -16,6 +16,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(components)
 Vue.use(VueDraggable)
+Vue.use(directive)
 Vue.prototype.store = store
 
 new Vue({
