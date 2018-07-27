@@ -1,16 +1,21 @@
 <template>
-      <bgFilter :url="img">
+      <bgFilter >
     <div class="index">
 <div v-drag-and-drop:options="store.index.options" class="drage">
-    <h2>我的项目</h2>
-  <ul>
-    <!-- 每个版块里有图片和跳转的路径 -->
-    <li v-for="(item,index) in imageArr" :key="index" @click="routerGo(item)">
-      <img :src="item.url" >
-        <h4>{{item.name}}</h4>
-    </li>
-    
-  </ul>
+  <div class="resful">
+    sss
+  </div>
+    <div class="content">
+      <h2>我的项目</h2>
+      <ul>
+        <!-- 每个版块里有图片和跳转的路径 -->
+        <li v-for="(item,index) in imageArr" :key="index" @click="routerGo(item)">
+          <img :src="item.url" >
+            <h4>{{item.name}}</h4>
+        </li>
+        
+      </ul>
+    </div>
   <!-- 分页 -->
    <pagination @checkPage="checkPage"/>
  
@@ -24,7 +29,7 @@ import img from "../../assets/image/timg.jpg";
 export default {
   data() {
     return {
-      imageArr: []
+      imageArr: [],
     };
   },
 
@@ -50,23 +55,24 @@ export default {
     routerGo(item) {
       console.log(item.router);
       this.$router.push({ name: item.router, params: item });
-    }
+    },
+   
   }
 };
 </script>
 <style scoped lang="less">
 .index {
   box-sizing: border-box;
-  color: aliceblue;
-  // background-color: rgb(74, 75, 70);
   height: 100%;
   .drage {
     position: absolute;
-    top: 0;
+    top: 60px;
     left: 0;
     margin: 0px 30px;
     z-index: 2;
-    h2 {
+    .content{
+  margin-top:100%;      
+      h2 {
       margin: 20px;
     }
     ul {
@@ -115,6 +121,7 @@ export default {
       li:hover h4 {
         color: aqua;
       }
+    }
     }
   }
 }

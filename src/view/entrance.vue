@@ -1,8 +1,6 @@
 <template>
     <bgFilter>
   <div class="entrance">
-     <el-button type="warning" icon="el-icon-star-off" circle class="main" 
-     @click="Gohome"></el-button>
     <ul>
       <li>
         <img src="../../assets/image/navImg.png" alt="photo" id="headeImg">
@@ -33,15 +31,7 @@ export default {
       email: "",
       password: ""
     };
-  },
-  created() {},
-  methods: {
-    Gohome() {
-      this.$router.push(
-        {name: "home", params  :{name:this.name,email:this.email,password:this.password}}
-        )
-    },
-  },
+  }
 };
 </script>
 
@@ -50,14 +40,6 @@ export default {
   height: 100%;
   text-align: center;
   background-color: #000;
-  .main{
-    position:absolute;
-    top:10px;
-    right:0px;
-    width:30px;
-    height:30px;
-  }
-  
   ul {
     width: 400px;
     position: absolute;

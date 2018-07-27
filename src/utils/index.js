@@ -1,4 +1,4 @@
-import index1 from "../../assets/image/index1.png"
+import index1 from "../../assets/image/img0.png"
 import index2 from "../../assets/image/index2.png"
 import index3 from "../../assets/image/index3.png"
 /**
