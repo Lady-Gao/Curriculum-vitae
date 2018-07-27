@@ -1,14 +1,23 @@
 <template>
     <div>
-        <div class="bg"/>
-        
+        <div class="bg" ref="bg"/>
+        <slot></slot>
     </div>
 </template>
 
 <script>
+
     export default {
-        name:"bgFilter"
-        
+        name:"bgFilter",
+        props:{
+            url:{
+                default:"https://goss3.vcg.com/creative/vcg/800/version23/VCG21gic19943940.jpg"
+            }
+        },
+        mounted () {
+            //动态背景图片
+                   this.$refs.bg.style.backgroundImage ='url('+this.url+')';
+        }
     }
 </script>
 
@@ -19,7 +28,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("https://goss3.vcg.com/creative/vcg/800/version23/VCG21gic19943940.jpg");
+    
     background-size: 100% 100%;
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);

@@ -1,6 +1,6 @@
 <template>
+    <bgFilter>
   <div class="entrance">
-    <bgFilter/>
      <el-button type="warning" icon="el-icon-star-off" circle class="main" 
      @click="Gohome"></el-button>
     <ul>
@@ -22,6 +22,7 @@
     </ul>
   
   </div>
+  </bgFilter>
 </template>
 
 <script>
