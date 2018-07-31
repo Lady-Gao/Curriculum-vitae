@@ -1,7 +1,7 @@
 <template>
-    <bgFilter>
+    <bgFilter  :url="url" >
   <div class="entrance">
-    <ul>
+    <ul class="land">
       <li>
         <img src="../../assets/image/navImg.png" alt="photo" id="headeImg">
       </li>
@@ -24,14 +24,19 @@
 </template>
 
 <script>
+import url from '../../assets/image/gaga.jpg';
 export default {
   data() {
     return {
       name: "",
       email: "",
-      password: ""
+      password: "",
+      url:""
     };
-  }
+  },
+created(){
+  this.url=url
+}
 };
 </script>
 
@@ -40,14 +45,16 @@ export default {
   height: 100%;
   text-align: center;
   background-color: #000;
-  ul {
+  .land {
     width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
+     
     transform: translate(-50%, -50%);
     li {
       margin: 20px;
+      text-align: center;
       #headeImg {
         width: 80px;
         height: 80px;

@@ -7,6 +7,9 @@
 <script>
     export default {
         name:"pagination",
+        props:{
+            
+        },
         methods: {
             checkPage(val) {
                 this.$emit("checkPage",val)
