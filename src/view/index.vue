@@ -1,17 +1,11 @@
 <template>
-      <bgFilter bgColor="rgba(0, 150, 136, 0.47)">
+      <bgFilter bgColor="#fff">
     <div class="index">
-<div class="domeShow">
-  <h2>Dome</h2>
-  <ul class="domeList">
-    <li v-for="(item,idx) in store.index.Dome" :key="idx" @click="domeGo(item)">{{item.name}}</li>
-  </ul>
-</div>
+
 <div v-drag-and-drop:options="store.index.options" class="drage">
   <div class="resful">
   </div>
     <div class="content">
-      <h2>我的项目</h2>
       <ul>
         <!-- 每个版块里有图片和跳转的路径 -->
         <li v-for="(item,index) in imageArr" :key="index" @click="routerGo(item)">
@@ -60,45 +54,22 @@ export default {
       console.log(item.router);
       this.$router.push({ name: item.router, params: item });
     },
-     /**
-     * 跳转dome页面
-     */
-    domeGo(item){
-      this.$router.push(item.path)
-    }
+    
   }
 };
 </script>
 <style scoped lang="less">
- h2 {
-        padding: 20px;
-      }
+
 .index {
   position: relative;
   box-sizing: border-box;
-  
-  .domeShow {
-    .domeList {
-    margin:100px;
-      height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-      li {
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
-        margin: 20px;
-        border-radius: 50%;
-        text-align: center;
-        background-color: aqua;
-      }
-    }
-  }
+  padding:80px;
   .drage {
     .content {
       ul {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         li:before {
           content: "";
           position: absolute;
@@ -113,14 +84,15 @@ export default {
           position: relative;
           margin-bottom: 20px;
           margin: 30px;
-          justify-content: space-between;
+          
           text-align: center;
           img {
             transition: all ease 0.5s;
             border-radius: 30%;
+            padding:15px;
             margin-bottom: 20px;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
           }
         }
         li:hover:before {
@@ -140,7 +112,7 @@ export default {
           -o-transform: scale(1.15, 1.15);
         }
         li:hover h4 {
-          color: aqua;
+          color:rgba(115, 240, 77, 0.5);
         }
       }
     }

@@ -31,7 +31,7 @@ export default {
       navArr:[
           {name:"Land",path:"/"},
           {name:"Home",path:"/home"},
-          {name:"flex",path:"/dome/flex"},
+          {name:"dome",path:"/dome"},
       ]
     };
   },
@@ -79,7 +79,7 @@ export default {
     position: fixed;;
   top:10px;
   right: 30px;
-  z-index: 1;
+  z-index: 10;
   width:500px;
   
   color: antiquewhite;

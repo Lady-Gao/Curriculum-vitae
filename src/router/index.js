@@ -4,6 +4,7 @@ import Home from '@/view/index'
 import land from '@/view/entrance'
 import SecondHand from '@/view/SecondHand/index'
 import flex from '@/view/flex'
+import dome from '@/view/dome.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
        path: '/SecondHand',
        name: 'SecondHand',
        component: SecondHand
+     },
+     {
+       path: '/dome',
+       name: 'dome',
+       component: dome
      },
      {
        path: '/dome/flex',
