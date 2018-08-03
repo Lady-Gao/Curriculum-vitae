@@ -4,6 +4,8 @@
   <ul class="domeList">
     <li v-for="(item,idx) in store.index.Dome" :key="idx" @click="domeGo(item)">{{item.name}}</li>
   </ul>
+  <div>
+  </div>
 </div>
     </bgFilter>
 </template>
@@ -16,7 +18,8 @@ export default {
      */
     domeGo(item){
       this.$router.push(item.path)
-    }
+    },
+    
     },
 };
 </script>

@@ -5,7 +5,8 @@ import index3 from "../../assets/image/index3.png"
  * 首页数据
  */
 export const index = {
-imageUrl: [{
+imageUrl: [
+  {
       url: index1,
       name: "二手车交易平台",
       gitpath: "https://github.com/Lady-Gao/Second-hand",
@@ -49,8 +50,8 @@ imageUrl: [{
       idx: 6
     }, {
       url: index1,
-      name: "员工管理系统",
-      gitpath: "https://github.com/Lady-Gao/Second-hand",
+      name: "H5web网站",
+      gitpath: "https://github.com/Lady-Gao/H5website",
       router: "SecondHand",
       idx: 7
     }, {
@@ -203,7 +204,27 @@ imageUrl: [{
     {
     name: "flexDome",
     path: "/dome/flex"
-  }
+  },
+    {
+    name: "flexDome",
+    path: "/dome/flex"
+  },
+    {
+    name: "flexDome",
+    path: "/dome/flex"
+  },
+    {
+    name: "flexDome",
+    path: "/dome/flex"
+  },
+    {
+    name: "flexDome",
+    path: "/dome/flex"
+  },
+    {
+    name: "flexDome",
+    path: "/dome/flex"
+  },
 ]
 }
 
@@ -219,16 +240,67 @@ export const Project = {
     title1: "Project role",
     title2: "Project introduction"
   },
-  contents: [{
+  contents: [
+    {
       content: "北京开拓明天科技有限公司成立于2006年（现已更名北京开拓明天科技股份有限公司-证券代码833009），专注于企业级移动互联网O+M跨场景运营平台搭建及系统运营领域",
       content1: "全栈开发",
       content2: "111111",
+      idx: 0,
     },
     {
       content: "111111",
       content1: "111111",
       content2: "111111",
+      idx: 1,
     },
+    {
+      content: "111111",
+      content1: "111111",
+      content2: "111111",
+      idx: 2
+    },
+    {
+      content: "111111",
+      content1: "111111",
+      content2: "111111",
+      idx: 3
+    },
+    {
+      content: "111111",
+      content1: "111111",
+      content2: "111111",
+      idx: 4
+    },
+    {
+      content: "111111",
+      content1: "111111",
+      content2: "111111",
+      idx: 5
+    },
+    {
+      content: "111111",
+      content1: "111111",
+      content2: "111111",
+      idx: 6
+    },
+    {
+      content: "111111",
+      content1: "111111",
+      content2: "111111",
+      idx: 7
+    },
+    {
+      content: "111111",
+      content1: "111111",
+      content2: "111111",
+      idx: 8
+    },
+    {
+      content: "111111",
+      content1: "111111",
+      content2: "111111",
+      idx: 9
+    }
   ]
 }
 
