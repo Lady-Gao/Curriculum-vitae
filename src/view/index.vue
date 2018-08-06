@@ -2,7 +2,7 @@
       <bgFilter bgColor="#fff">
     <div class="index">
 
-<div v-drag-and-drop:options="store.index.options" class="drage">
+<div  class="drage">
   <div class="resful">
   </div>
     <div class="content">
@@ -24,7 +24,6 @@
 </template>
 <script>
 // 引入背景图
-import img from "../../assets/image/timg.jpg";
 export default {
   data() {
     return {
@@ -34,7 +33,6 @@ export default {
 
   created() {
     this.imageArr = this.store.index.imageUrl.slice(0, 10);
-    this.img = img;
   },
   methods: {
     /**

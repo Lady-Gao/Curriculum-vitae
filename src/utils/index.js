@@ -189,17 +189,6 @@ imageUrl: [
       idx: 0,
     },
 ],
-  //拖拽
-  options: {
-    dropzoneSelector: 'ul',
-    draggableSelector: 'li',
-    excludeOlderBrowsers: true,
-    multipleDropzonesItemsDraggingEnabled: true,
-    showDropzoneAreas: true,
-    onDragstart: function (event) {},
-    onDragend: function (event) {},
-    onDrop: function (event) {},
-  },
   Dome: [
     {
     name: "flexDome",
