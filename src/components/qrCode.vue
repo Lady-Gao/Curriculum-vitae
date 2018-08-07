@@ -4,7 +4,7 @@
         <qrcode-vue :value="url" :size="100" level="H"></qrcode-vue>
         <!-- 二维码生成方法二 
          <img :src="src"  /> -->
-        <h5 @click="toPath">点击进入...</h5>
+        <p><span @click="toPath">点击进入...</span></p>
     </div>
 </template>
 
@@ -47,10 +47,12 @@ import QrcodeVue from 'qrcode.vue';
 
 <style scoped lang="less">
 .qrcode{
-    margin:30px;
+    padding-top:20%;
+    box-sizing: border-box;
     text-align: center;
-    h5:hover{
+    span:hover{
         color:rgb(245, 145, 14);
+        cursor: pointer;
     }
 }
 </style>

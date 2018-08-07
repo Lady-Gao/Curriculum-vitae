@@ -1,5 +1,5 @@
 <template>
-      <bgFilter bgColor="#fff">
+      <bgFilter bgColor="#000">
     <div class="index">
 
 <div  class="drage">
@@ -62,6 +62,7 @@ export default {
   position: relative;
   box-sizing: border-box;
   padding:80px;
+  color: antiquewhite;
   .drage {
     .content {
       ul {
@@ -82,8 +83,8 @@ export default {
           position: relative;
           margin-bottom: 20px;
           margin: 30px;
-          
           text-align: center;
+            transition: all ease 0.5s;
           img {
             transition: all ease 0.5s;
             border-radius: 30%;
@@ -91,6 +92,8 @@ export default {
             margin-bottom: 20px;
             width: 120px;
             height: 120px;
+          background-color: #fff;
+
           }
         }
         li:hover:before {
@@ -108,6 +111,7 @@ export default {
           -moz-transform: scale(1.15, 1.15); /* Firefox */
           -webkit-transform: scale(1.15, 1.15); /* Safari 和 Chrome */
           -o-transform: scale(1.15, 1.15);
+           background-color: transparent;
         }
         li:hover h4 {
           color:rgba(115, 240, 77, 0.5);

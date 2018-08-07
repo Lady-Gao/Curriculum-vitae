@@ -22,7 +22,7 @@ export default {
       default:"rgba(223, 213, 213, 0.877)"
     },
     bgSize:{
-      default:"90% 90%"
+      default:"100% 100%"
     }
   },
   data() {
@@ -37,12 +37,13 @@ export default {
   },
   mounted() {
     //动态背景图片
+    console.log(this.url)
     this.url&&(this.$refs.bg.style.backgroundImage = "url(" + this.url + ")")
     ;
     this.bgColor&&(this.$refs.bg.style.backgroundColor = this.bgColor)
     ;
     this.bgSize&&(this.$refs.bg.style.backgroundSize = this.bgSize)
-    ;
+  
   },
   methods: {
     /**

@@ -1,5 +1,5 @@
 <template>
-        <bgFilter>
+        <bgFilter bgColor="#fff" >
           <div class="model">
               <el-collapse accordion class="collapse">
                   <el-collapse-item :title="ProjectTilte.title">
@@ -24,8 +24,6 @@ export default {
     };
   },
   mounted() {
-    this.src =
-      "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=3434/";
   },
   computed: {
     ProjectTilte() {
@@ -50,6 +48,8 @@ export default {
     z-index: 10;
     width: 96%;
     .el-collapse-item__header {
+      font-size: 16px;
+      font-weight: bold;
       background-color: rgba(0, 0, 0, 0);
     }
     p {
