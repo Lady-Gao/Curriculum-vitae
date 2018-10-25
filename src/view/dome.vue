@@ -1,5 +1,5 @@
 <template>
- <bgFilter bgColor="#fff">
+ <bgFilter >
 <div class="domeShow">
   <ul class="domeList">
     <li v-for="(item,idx) in store.index.Dome" :key="idx" @click="domeGo(item)">{{item.name}}</li>

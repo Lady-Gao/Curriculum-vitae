@@ -4,7 +4,9 @@
          <!-- 导航 -->
         <div class="nav">
             <ul>
-                <li  v-for="(item,index) in navArr" :key="index" @click="handleSelect(item.path)">{{item.name}}</li>
+                <li  v-for="(item,index) in navArr" :key="index" @click="handleSelect(item.path)">
+                  <h4>{{item.name}}</h4>
+                </li>
               
             </ul>
     </div>

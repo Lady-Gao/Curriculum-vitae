@@ -1,14 +1,14 @@
 <template>
         <bgFilter>
           <div class="model">
-              <el-collapse accordion class="collapse">
+              <el-collapse accordion class="collapse" v-model="activeName" name="1">
                   <el-collapse-item :title="ProjectTilte.title">
                       <p v-height="0.3">{{ProjectContent.content}}</p>
                 </el-collapse-item>
-                  <el-collapse-item :title="ProjectTilte.title1">
-                      <p v-height="0.3">{{ProjectContent.content1}}</p>
+                  <el-collapse-item :title="ProjectTilte.title1" name="2">
+                      <p v-height="0.3">{{ProjectContent.content1}}    :    {{ProjectContent.content2}}</p>
                 </el-collapse-item>
-                  <el-collapse-item :title="ProjectTilte.title2">
+                  <el-collapse-item :title="ProjectTilte.title2" name="3">
                 <qrCode v-height="0.5" :url="$route.params.gitpath"/>
                 </el-collapse-item>
               </el-collapse>
@@ -20,7 +20,8 @@
 export default {
   data() {
     return {
-      src: ""
+      src: "",
+      activeName:"3"
     };
   },
   mounted() {

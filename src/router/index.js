@@ -5,7 +5,6 @@ import land from '@/view/entrance'
 import SecondHand from '@/view/SecondHand/index'
 import flex from '@/view/flex'
 import dome from '@/view/dome.vue'
-import H5web from '@/view/H5web'
 
 Vue.use(Router)
 
@@ -25,11 +24,6 @@ export default new Router({
        path: '/SecondHand',
        name: 'SecondHand',
        component: SecondHand
-     },
-     {
-       path: '/H5web',
-       name: 'H5web',
-       component: H5web
      },
      {
        path: '/dome',
